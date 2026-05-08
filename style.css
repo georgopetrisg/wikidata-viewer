@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Lato:wght@300;400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: #0f0e0c;
+    color: #e8e0d0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+}
+
+/* ══ SCREEN 1 — Selector ══════════════════════════ */
+#screen-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 16px;
+    padding: 40px 24px;
+}
+#screen-select h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #f0e8d5;
+}
+#screen-select > p {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b5954a;
+    margin-bottom: 12px;
+}
+#select-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 340px;
+}
+#select-buttons button {
+    background: transparent;
+    border: 1px solid rgba(181,149,74,0.4);
+    color: #e8e0d0;
+    padding: 16px 28px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+}
+#select-buttons button:hover {
+    background: #b5954a;
+    border-color: #b5954a;
+    color: #0f0e0c;
+    padding-left: 36px;
+}
+
+/* ══ SCREEN 2 — Viewer ════════════════════════════ */
+#btn-back {
+    display: block;
+    background: transparent;
+    border: none;
+    color: #b5954a;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 60px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+#btn-back:hover { opacity: 0.6; }
+
+#label {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    padding: 0 60px;
+    color: #f0e8d5;
+}
+#description {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b5954a;
+    padding: 14px 60px 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── Εικόνα + Χάρτης δίπλα δίπλα ───────────────── */
+#media-row {
+    display: flex;          /* τα δύο παιδιά σε σειρά */
+    align-items: stretch;   /* ο χάρτης τεντώνεται στο ύψος της εικόνας */
+    border-top: 3px solid #b5954a;
+}
+
+#image {
+    display: none;
+    width: 50%;
+    object-fit: cover;      /* η εικόνα γεμίζει τον χώρο της χωρίς παραμόρφωση */
+    object-position: center;
+    padding: 50px;
+}
+
+#map {
+    flex: 1;
+}
+
+/* ── Leaflet popup ── */
+.leaflet-popup-content-wrapper {
+    background: #1a1915;
+    color: #f0e8d5;
+    border-radius: 2px;
+    border: 1px solid #b5954a;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+.leaflet-popup-tip          { background: #1a1915; }
+.leaflet-popup-close-button { color: #b5954a !important; }
+
+/* ── Responsive — στοίβα κάθετα σε μικρές οθόνες ── */
+@media (max-width: 700px) {
+    #media-row  { flex-direction: column; }
+    #image      { width: 100%; max-height: 300px; }
+    #label, #description, #btn-back { padding-left: 24px; padding-right: 24px; }
+}

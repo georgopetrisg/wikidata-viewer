@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prague Sightseeings</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <link rel="icon" type="image/x-icon" href="https://api.iconify.design/flag:cz-1x1.svg">
+    </head>
+    <body>
+        <div id="screen-select">
+            <h1>Prague Sightseeings</h1>
+            <p>Επίλεξε τοποθεσία</p>
+            <div id="select-buttons"></div>
+            <p>Data from <a href="https://www.wikidata.org">Wikidata</a></p>
+        </div>
+ 
+        <div id="screen-viewer" style="display:none">
+            <button id="btn-back">← Πίσω</button>
+            <h2 id="label"></h2>
+            <p  id="description"></p>
+ 
+            <!-- εικόνα + χάρτης δίπλα δίπλα -->
+            <div id="media-row">
+                <img id="image" src="" alt=""/>
+                <div id="map"></div>
+            </div>  
+        </div>
+ 
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
