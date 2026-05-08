@@ -5,7 +5,9 @@ const ENTITIES = [
     { id: 'Q193369', name: 'Prague Castle'},
     { id: 'Q220086', name: 'Prague Zoo'},
     { id: 'Q5949', name: 'St. Vitus Cathedral'},
-    { id: 'Q1630131', name: 'Lennon Wall'}
+    { id: 'Q1630131', name: 'Lennon Wall'},
+    { id: 'Q384544', name: 'Karlovy Vary'},
+    { id: 'Q3507490', name: 'Palladium'}
 ];
 
 // Φτιάχνω τα κουμπιά δυναμικά
