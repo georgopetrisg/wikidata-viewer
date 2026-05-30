@@ -1,6 +1,8 @@
 # Wikidata Viewer
 
-A small static web app that showcases [Wikidata](https://www.wikidata.org) items — currently focused on Prague sightseeing landmarks.
+A small static web app that showcases [Wikidata](https://www.wikidata.org) items - currently focused on Prague sightseeing landmarks.
+
+This project was implemented as part of the "**Ionian Wikithon 2026**" event at the **Department of Informatics, Ionian University (2025-2026)**.
 
 ## What it does
 
